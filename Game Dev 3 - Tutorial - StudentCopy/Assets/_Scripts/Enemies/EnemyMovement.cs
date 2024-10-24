@@ -6,6 +6,16 @@ public class EnemyMovement : MonoBehaviour
 {    
     //Default move value
     private float movementSpeed = 1f;
+    // Reference to the enemy data
+    public EnemyData enemyData;
+
+    private void Start()
+    {
+        //To set the speed from the S.O.
+        movementSpeed = enemyData.shipSpeed;
+
+    }
+
 
     private void FixedUpdate()
     {

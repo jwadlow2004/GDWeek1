@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +11,16 @@ public class EnemyLife : MonoBehaviour
     private PlayerFiring firingScriptRef;
     //Ref to the enemy vfx script
     private EnemyVfx enemyVfx;
+    // Reference to the Scriptable Object
+    public EnemyData enemyData;
 
     private void Start()
     {
         //Gets the data
         firingScriptRef = FindObjectOfType<PlayerFiring>();        
         enemyVfx = GetComponent<EnemyVfx>();
+        // Overide for the life value 
+        enemyHp = enemyData.shipHp;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
