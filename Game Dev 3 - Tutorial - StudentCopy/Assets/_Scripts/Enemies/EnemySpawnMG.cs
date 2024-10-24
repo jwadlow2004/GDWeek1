@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemySpawnMG : MonoBehaviour
 {
     // Array to store to spawnpoints
